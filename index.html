@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #FFB6C1;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+        
+        .game-container {
+            text-align: center;
+        }
+        
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        #gameCanvas {
+            border: 3px solid #FF69B4;
+            background-color: #FFF0F5;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+        }
+        
+        .score {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #4CAF50;
+        }
+        
+        .controls {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ccc;
+        }
+        
+        .game-over {
+            color: #ff4444;
+            font-size: 28px;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        .restart-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .restart-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐍 Snake Game</h1>
+        <div class="score">Score: <span id="score">0</span></div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="game-over" id="gameOver">Game Over!</div>
+        <button class="restart-btn" id="restartBtn" onclick="restartGame()">Play Again</button>
+        <div class="controls">
+            <p>Use arrow keys to control the snake</p>
+            <p>🔼 ⬅️ ⬇️ ➡️</p>
+        </div>
+    </div>
+    
+    <script src="snake.js"></script>
+</body>
+</html>
